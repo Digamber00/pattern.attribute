@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--testing version using git-->
+    <form action="./registerresponse.html" method="get">
+        <fieldset>
+        <legend>register form</legend>
+        <div>
+            <label for="username"><b>username :</b></label><br>
+            <input type="text" name="username" id="username" required pattern="[a-zA-Z ]{5,20}" title="only small letters and capita letters are allowed and numbers are not allowed and also range should be in 5-20" autofocus autocomplete="on"><br>
+        </div>
+        <div>
+            <label for="password"><b>password:</b></label><br>
+            <input type="text" id="password" name="pass" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&])[a-zA-Z\d!@#$%^&*]{8,16}" title="password should contain aleast one small letter,capital letter,number,special symbol"><br>
+        </div>
+        <div>
+            <label for="email"><b>email:</b></label><br>
+            <input type="text" id="email" name="email" required pattern="[a-z\d._]+@[a-z]+\.[a-z]{2,}" title="email should have one @ , only small letters , special symbols like ._ are allowed"><br>
+        </div>
+        <div>
+            <label for="phone"><b>phone number :</b></label><br>
+            <input type="text" id="phone" name="phonemnumber" required pattern="\+91[6-9]\d{9}" title="phone should start with +91 and starting number should 6 or 7 or 8 or 9 and total number size should be 10"><br>
+        </div>
+        <div>
+            <label for="date"><b>Date of birth</b></label><br>
+            <input type="text" id="date" name="date of birth" required pattern="(0[1-9]|[12]\d|3[01])-(0[1-9]|1[0-2])-(19|20)\d{2}" title="date format should be in dd-mm-yyyy"><br>
+        
+        </div>
+        <div>
+            <label for="state"><b> choose state: </b></label><br>
+            <select name="state" id="state">
+                <option value="telangana">telangana</option>
+                <option value="tamil nadu">tamil nadu</option>
+                <option value="karnataka">karnataka</option>
+                <option value="kerala">kerala</option>
+            </select><br>
+        </div>
+                <label for="city"><b>Choose your city from the list:</b></label><br>
+                <input type="text" list="cities" name="city" id="city">
+                <datalist id="cities">
+                  <option value="hyderbad">
+                  <option value="secunderabad">
+                  <option value="banglore">
+                  <option value="chennai">
+                  <option value="medchal">
+                </datalist><br>
+        
+        <input type="submit" value=" click to register ">
+    </form>
+</body>
+</html>
